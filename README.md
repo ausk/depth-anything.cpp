@@ -283,7 +283,23 @@ Ettore Di Giacinto ([@mudler](https://github.com/mudler)).
 
 ## License
 
-depth-anything.cpp is released under the [MIT License](LICENSE). The Depth Anything 3 model weights are governed by their original license (Apache-2.0) - check each model card on HuggingFace.
+depth-anything.cpp is released under the [MIT License](LICENSE). Model weights
+retain the license of their original Depth Anything checkpoint; converting them
+to GGUF does not change that license. For the models supported by the demo:
+
+| Model | Weight license | Commercial use |
+| --- | --- | --- |
+| DA3 Small | Apache-2.0 | Permitted under the license terms |
+| DA3 Base (default) | Apache-2.0 | Permitted under the license terms |
+| DA3 Large | CC BY-NC 4.0 | Non-commercial only |
+| DA3 Giant | CC BY-NC 4.0 | Non-commercial only |
+| DA3 Nested | CC BY-NC 4.0 | Non-commercial only |
+
+Always check the
+[official model table](https://github.com/ByteDance-Seed/Depth-Anything-3#%EF%B8%8F-model-cards)
+and the individual Hugging Face model card before distributing or commercially
+deploying a checkpoint, since upstream terms may change or differ for other
+model variants.
 
 ---
 
