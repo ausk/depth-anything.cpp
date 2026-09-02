@@ -239,8 +239,8 @@ bool DinoBackbone::build_feats_graph(ggml_context* ctx, const std::vector<float>
     const std::vector<int32_t>& outL = c.out_layers;
     const size_t NL = outL.size();
 
-    ggml_tensor* nw = ml_.tensor("vit.norm.weight");
-    ggml_tensor* nb = ml_.tensor("vit.norm.bias");
+    ggml_tensor* nw = ml_.host_tensor("vit.norm.weight");
+    ggml_tensor* nb = ml_.host_tensor("vit.norm.bias");
     if (be_.is_offloading()) {
         // vit.norm.* are kept as host gguf tensors (no backend buffer) for the
         // host-side layernorm used by other paths. Here they feed an IN-GRAPH
